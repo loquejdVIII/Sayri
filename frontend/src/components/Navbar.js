@@ -1,33 +1,20 @@
 import { Link } from 'react-router-dom';
+import '../styles/navbar.css';
 
 function Navbar() {
   return (
-    <nav style={styles.nav}>
-      <h2>Sayri</h2>
+    <nav className="navbar">
+      <h2 className="navbar__logo">Sayri</h2>
 
-      <div style={styles.links}>
-        <Link to="/">Inicio</Link>
-        <Link to="/servicios">Servicios</Link>
-        <Link to="/corporativos">Corporativos</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/contacto">Contáctanos</Link>
+      <div className="navbar__links">
+        <Link className="navbar__link" to="/">Inicio</Link>
+        <Link className="navbar__link" to="/servicios">Servicios</Link>
+        <Link className="navbar__link" to="/corporativos">Corporativos</Link>
+        <Link className="navbar__link" to="/blog">Blog</Link>
+        <Link className="navbar__cta" to="/contacto">Reservar consulta</Link>
       </div>
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '16px 32px',
-    background: '#f5f5f5'
-  },
-  links: {
-    display: 'flex',
-    gap: '16px'
-  }
-};
 
 export default Navbar;
